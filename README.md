@@ -1,1 +1,1 @@
-This is my .vimrc file. 
+My dotfiles
