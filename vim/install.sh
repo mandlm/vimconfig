@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-ln -svr vimrc ~/.vimrc
+ln -svrf vimrc ~/.vimrc
  
