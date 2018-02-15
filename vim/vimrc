@@ -11,3 +11,11 @@ set shiftwidth=4
 " line numbers
 set number
 
+" themes
+colorscheme elflord
+
+" gvim layout
+set guioptions-=r
+set guioptions-=L
+set guioptions-=m
+set guioptions-=T
