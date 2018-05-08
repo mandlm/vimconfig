@@ -1,0 +1,35 @@
+Language:				Cpp
+IndentWidth:			4
+AccessModifierOffset:	-4
+ColumnLimit:			80
+UseTab:					ForContinuationAndIndentation
+TabWidth:				4
+
+SortIncludes:			false
+
+AlignAfterOpenBracket:	DontAlign
+
+BreakBeforeBinaryOperators:	NonAssignment
+
+BreakBeforeBraces:		Custom
+BraceWrapping:
+  AfterClass:			true
+  AfterStruct:			true
+  AfterFunction:		true
+  AfterNamespace:		false
+  AfterControlStatement:	true
+  BeforeElse:			true
+  BeforeCatch:			true
+
+MaxEmptyLinesToKeep:	1
+Standard:				Auto
+
+IndentCaseLabels:		true
+
+BinPackArguments:		true
+BinPackParameters:		true
+
+AllowShortFunctionsOnASingleLine:	false
+
+NamespaceIndentation:	Inner
+
