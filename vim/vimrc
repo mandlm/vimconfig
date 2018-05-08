@@ -1,3 +1,6 @@
+" pathogen
+execute pathogen#infect()
+
 " auto indent
 filetype plugin indent on
 
@@ -11,6 +14,9 @@ set shiftwidth=4
 " line numbers
 set number
 
+" always enable status line
+set laststatus=2
+
 " themes
 colorscheme elflord
 
@@ -19,3 +25,4 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=m
 set guioptions-=T
+
