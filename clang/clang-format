@@ -1,13 +1,12 @@
+
 Language:				Cpp
 IndentWidth:			4
 AccessModifierOffset:	-4
-ColumnLimit:			80
-UseTab:					ForContinuationAndIndentation
+ColumnLimit:			100
+UseTab:					ForIndentation
 TabWidth:				4
 
 SortIncludes:			false
-
-AlignAfterOpenBracket:	DontAlign
 
 BreakBeforeBinaryOperators:	NonAssignment
 
@@ -15,12 +14,15 @@ BreakBeforeBraces:		Custom
 BraceWrapping:
   AfterClass:			true
   AfterStruct:			true
+  AfterUnion:			true
   AfterFunction:		true
+  AfterEnum:            true
   AfterNamespace:		false
   AfterControlStatement:	true
   BeforeElse:			true
   BeforeCatch:			true
 
+KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep:	1
 Standard:				Auto
 
@@ -33,3 +35,27 @@ AllowShortFunctionsOnASingleLine:	false
 
 NamespaceIndentation:	Inner
 
+ReflowComments: false
+PenaltyBreakComment: 1000000
+
+AllowAllParametersOfDeclarationOnNextLine: true
+
+AlwaysBreakTemplateDeclarations: Yes
+AlwaysBreakBeforeMultilineStrings: true
+
+SpaceAfterTemplateKeyword: false
+SpaceBeforeParens: ControlStatements
+
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+
+CompactNamespaces: true
+
+FixNamespaceComments: false
+
+AlignTrailingComments: true
+
+
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
