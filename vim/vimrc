@@ -17,6 +17,15 @@ set number
 " always enable status line
 set laststatus=2
 
+" youcomleteme config
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+nmap <F12> :YcmCompleter GoTo<CR>
+
+" vim-airline config
+let g:airline#extensions#whitespace#mixed_indent_algo = 2
+
 " themes
 colorscheme elflord
 
