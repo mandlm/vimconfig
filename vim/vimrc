@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.vim/vim-plug')
 Plug 'valloric/youcompleteme'
 Plug 'rhysd/vim-clang-format'
+Plug 'derekwyatt/vim-fswitch'
 Plug 'vim-airline/vim-airline'
 Plug 'ambv/black'
 call plug#end()
@@ -31,6 +32,12 @@ nmap <F12> :YcmCompleter GoTo<CR>
 
 " vim-airline config
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
+
+" Black config
+autocmd BufWritePre *.py execute ':Black'
+
+" vim-fswitch
+nmap <F5> :FSHere<CR>
 
 " themes
 colorscheme elflord
