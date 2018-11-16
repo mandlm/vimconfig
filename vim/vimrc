@@ -12,9 +12,11 @@ Plug 'valloric/youcompleteme'
 Plug 'rhysd/vim-clang-format'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ambv/black'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
+Plug 'craigemery/vim-autotag'
 
 call plug#end()
 
@@ -28,6 +30,9 @@ set number
 " always enable status line
 set laststatus=2
 
+" search upwards for tags file
+set tags=./tags;
+
 " youcomleteme config
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -36,6 +41,7 @@ nmap <F12> :YcmCompleter GoTo<CR>
 
 " vim-airline config
 let g:airline#extensions#whitespace#mixed_indent_algo = 2
+let g:airline_solarized_bg='dark'
 
 " Black config
 autocmd BufWritePre *.py execute ':Black'
