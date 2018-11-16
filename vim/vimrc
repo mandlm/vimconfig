@@ -30,8 +30,9 @@ set number
 " always enable status line
 set laststatus=2
 
-" search upwards for tags file
+" ctags config
 set tags=./tags;
+nnoremap <F2> <C-]>
 
 " youcomleteme config
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -47,8 +48,11 @@ let g:airline_solarized_bg='dark'
 autocmd BufWritePre *.py execute ':Black'
 
 " vim-fswitch
-nmap <F5> :FSHere<CR>
+nmap <ESC>o :FSHere<CR>
 
 " vim-colors-solarized
 set background=dark
 colorscheme solarized
+
+" CtrlP
+nmap <ESC><C-P> :CtrlPTag<CR>
