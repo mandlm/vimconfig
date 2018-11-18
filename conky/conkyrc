@@ -62,6 +62,7 @@ conky.config = {
 
 conky.text = [[
 ${color}Uptime:$color $uptime
+${if_existing /proc/acpi/battery/BAT1}${color}Battery: ${battery_percent BAT1}% ${battery_bar 4 BAT1}$endif
 ${color}Frequency:$color $freq_g GHz
 ${color}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
 ${color}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
