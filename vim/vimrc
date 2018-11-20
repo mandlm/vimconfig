@@ -1,4 +1,6 @@
-source ~/.vimrc.local
+if filereadable("~/.vimrc.local")
+	source ~/.vimrc.local
+endif
 
 " vim-plug installer
 if empty(glob('~/.vim/autoload/plug.vim'))
