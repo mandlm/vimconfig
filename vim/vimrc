@@ -8,15 +8,16 @@ endif
 " vim-plug plugins
 call plug#begin('~/.vim/vim-plug')
 
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
 Plug 'rhysd/vim-clang-format'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ambv/black'
 Plug 'altercation/vim-colors-solarized'
-Plug 'kien/ctrlp.vim'
 Plug 'craigemery/vim-autotag'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -54,5 +55,6 @@ nmap <ESC>o :FSHere<CR>
 set background=dark
 colorscheme solarized
 
-" CtrlP
-nmap <ESC><C-P> :CtrlPTag<CR>
+" fzf.vim
+nmap <C-P> :Files<CR>
+nmap <ESC><C-P> :Tags<CR>
