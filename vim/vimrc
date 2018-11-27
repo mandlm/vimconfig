@@ -35,6 +35,9 @@ set background=dark
 " line numbers
 set number
 
+" max line length column
+set colorcolumn=100
+
 " always enable status line
 set laststatus=2
 
