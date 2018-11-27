@@ -15,8 +15,7 @@ call plug#begin('~/.vim/vim-plug')
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
 Plug 'rhysd/vim-clang-format'
 Plug 'derekwyatt/vim-fswitch'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'ambv/black'
 Plug 'altercation/vim-colors-solarized'
 Plug 'craigemery/vim-autotag'
@@ -29,6 +28,9 @@ call plug#end()
 " tabwidth
 set tabstop=4
 set shiftwidth=4
+
+" dark theme
+set background=dark
 
 " line numbers
 set number
@@ -46,9 +48,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 nmap <F12> :YcmCompleter GoTo<CR>
 
-" vim-airline config
-let g:airline#extensions#whitespace#mixed_indent_algo = 2
-let g:airline_solarized_bg='dark'
+" lightline config
+let g:lightline = { 'colorscheme': 'solarized' }
 
 " Black config
 autocmd BufWritePre *.py execute ':Black'
@@ -57,7 +58,6 @@ autocmd BufWritePre *.py execute ':Black'
 nmap <ESC>o :FSHere<CR>
 
 " vim-colors-solarized
-set background=dark
 colorscheme solarized
 
 " fzf.vim
