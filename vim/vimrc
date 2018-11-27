@@ -45,6 +45,9 @@ set laststatus=2
 set tags=./tags;
 nnoremap <F2> <C-]>
 
+" autotag
+let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
+
 " youcomleteme config
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
