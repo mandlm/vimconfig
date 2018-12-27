@@ -2,6 +2,8 @@ if filereadable("~/.vimrc.local")
 	source ~/.vimrc.local
 endif
 
+packadd! termdebug
+
 " vim-plug installer
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
