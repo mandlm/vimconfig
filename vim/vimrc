@@ -73,3 +73,8 @@ colorscheme solarized
 " fzf.vim
 nmap <C-P> :Files<CR>
 nmap <ESC><C-P> :Tags<CR>
+
+" terminal colors
+hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+
+
