@@ -33,14 +33,14 @@ call plug#end()
 set tabstop=4
 set shiftwidth=4
 
+" autowrite
+set autowrite
+
 " dark theme
 set background=dark
 
 " line numbers
 set number
-
-" max line length column
-set colorcolumn=100
 
 " always enable status line
 set laststatus=2
