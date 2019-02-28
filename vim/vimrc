@@ -77,4 +77,11 @@ nmap <ESC><C-P> :Tags<CR>
 " terminal colors
 hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
-
+" incremental searching
+set incsearch
+set hlsearch
+"augroup vimrc-incsearch-highlight
+"  autocmd!
+"  autocmd CmdlineEnter /,\? :set hlsearch
+"  autocmd CmdlineLeave /,\? :set nohlsearch
+"augroup END
