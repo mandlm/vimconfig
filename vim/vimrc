@@ -14,7 +14,14 @@ endif
 " vim-plug plugins
 call plug#begin('~/.vim/vim-plug')
 
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer' }
+" deoplete
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+" LanguageClient-neovim
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
+
 Plug 'rhysd/vim-clang-format'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'itchyny/lightline.vim'
@@ -54,11 +61,20 @@ nnoremap <F2> <C-]>
 " autotag
 let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
 
-" youcomleteme config
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
+" deoplete
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-nmap <F12> :YcmCompleter GoTo<CR>
+" LanguageClient-neovim
+set hidden
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <F12> :call LanguageClient#textDocument_definition()<CR>
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['pyls'],
+	\ 'cpp': ['clangd'],
+    \ }
 
 " lightline config
 let g:lightline = { 'colorscheme': 'solarized' }
@@ -82,11 +98,6 @@ hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gu
 " incremental searching
 set incsearch
 set hlsearch
-"augroup vimrc-incsearch-highlight
-"  autocmd!
-"  autocmd CmdlineEnter /,\? :set hlsearch
-"  autocmd CmdlineLeave /,\? :set nohlsearch
-"augroup END
 
 " asynrun.vim
 let g:asyncrun_open = 16
