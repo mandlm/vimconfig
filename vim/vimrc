@@ -26,6 +26,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'linuor/ucmake.vim'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -85,3 +87,6 @@ set hlsearch
 "  autocmd CmdlineEnter /,\? :set hlsearch
 "  autocmd CmdlineLeave /,\? :set nohlsearch
 "augroup END
+
+" asynrun.vim
+let g:asyncrun_open = 16
