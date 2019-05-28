@@ -35,6 +35,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'linuor/ucmake.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'mileszs/ack.vim'
+Plug 'markonm/traces.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -63,6 +65,7 @@ let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+autocmd CompleteDone * silent! pclose!
 call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
