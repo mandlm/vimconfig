@@ -95,6 +95,7 @@ colorscheme solarized
 
 " fzf.vim
 nmap <C-P> :Files<CR>
+nmap <C-F> :Rg<CR>
 nmap <ESC><C-P> :Tags<CR>
 
 " terminal colors
