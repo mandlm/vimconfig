@@ -1,0 +1,38 @@
+[user]
+	email = changeme
+	name = changeme
+[push]
+	default = simple
+[core]
+	editor = vim
+	pager = less -x1,5
+	whitespace = cr-at-eol
+[rebase]
+	autostash = true
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = 64 
+	whitespace = red reverse            
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = vimdiff
+[gitflow]
+	multi-hotfix = true
+[gitflow "branch"]
+	master = master
+	develop = develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = 
+[log]
+	date = relative
+[format]
+	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s
+
