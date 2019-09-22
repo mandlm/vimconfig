@@ -55,6 +55,16 @@ set number
 " always enable status line
 set laststatus=2
 
+" faster saving
+set nofsync
+
+" autoread/checktime timer
+set autoread
+function CheckTime(timer)
+	checktime
+endfunction
+let timerChecktime = timer_start(4000, 'CheckTime', {'repeat': -1})
+
 " ctags config
 set tags=./tags;
 nnoremap <F2> <C-]>
