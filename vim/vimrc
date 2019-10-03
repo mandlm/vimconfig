@@ -125,3 +125,9 @@ let g:asyncrun_open = 16
 " prosession
 let g:prosession_tmux_title = 1
 let g:prosession_per_branch = 1
+
+" modeline
+set modeline
+set modelines=5
+
+" vim: foldmethod=marker foldmarker={{{,}}}
