@@ -36,3 +36,5 @@
 [format]
 	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7,trunc)%aN%Cred%d %Creset%s
 
+[rerere]
+	enabled = true
