@@ -1,10 +1,8 @@
-" vim: set foldmethod=marker foldmarker={{{,}}}
-
+" vimrc.local {{{
 if filereadable("~/.vimrc.local")
 	source ~/.vimrc.local
 endif
-
-packadd! termdebug
+" }}}
 
 " vim-plug installer {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -47,6 +45,8 @@ Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 " }}}
 
+packadd! termdebug
+
 " tabwidth
 set tabstop=4
 set shiftwidth=4
@@ -63,12 +63,13 @@ set laststatus=2
 " faster saving
 set nofsync
 
-" autoread/checktime timer
+" autoread/checktime timer {{{
 set autoread
 function CheckTime(timer)
 	checktime
 endfunction
 let timerChecktime = timer_start(4000, 'CheckTime', {'repeat': -1})
+" }}}
 
 " ctags config
 set tags=./tags;
