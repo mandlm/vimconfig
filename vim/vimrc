@@ -113,6 +113,26 @@ nmap <C-P> :Files<CR>
 nmap <C-F> :Rg \b<C-R><C-W>\b<CR>
 nmap <ESC><C-P> :Tags<CR>
 
+function SplitOpenFile(filename)
+	execute("tabedit " . a:filename)
+	let l:file_extension = tolower(fnamemodify(a:filename, ":e"))
+	if l:file_extension == "cpp"
+		execute("FSSplitLeft")
+		execute("wincmd l")
+	elseif l:file_extension == "h"
+		execute("FSSplitRight")
+		execute("wincmd h")
+	endif
+endfunction
+
+command -nargs=1 SplitOpen :call SplitOpenFile("<args>")
+
+let g:fzf_action= {
+ \ 'ctrl-t': 'tab drop',
+ \ 'ctrl-s': 'SplitOpen',
+ \ 'ctrl-x': 'split',
+ \ 'ctrl-v': 'vsplit' }
+
 " terminal colors
 hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
