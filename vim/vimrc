@@ -131,4 +131,8 @@ let g:prosession_per_branch = 1
 set modeline
 set modelines=5
 
+" vimrc editing
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>:echo "Reloaded vimrc"<cr>
+
 " vim: foldmethod=marker foldmarker={{{,}}}
