@@ -42,6 +42,8 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'markonm/traces.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'mandlm/vim-split-open'
+
 call plug#end()
 " }}}
 
@@ -113,22 +115,8 @@ nmap <C-P> :Files<CR>
 nmap <C-F> :Rg \b<C-R><C-W>\b<CR>
 nmap <ESC><C-P> :Tags<CR>
 
-function SplitOpenFile(filename)
-	execute("tabedit " . a:filename)
-	let l:file_extension = tolower(fnamemodify(a:filename, ":e"))
-	if l:file_extension == "cpp"
-		execute("FSSplitLeft")
-		execute("wincmd l")
-	elseif l:file_extension == "h"
-		execute("FSSplitRight")
-		execute("wincmd h")
-	endif
-endfunction
-
-command -nargs=1 SplitOpen :call SplitOpenFile("<args>")
-
 let g:fzf_action= {
- \ 'ctrl-t': 'tab drop',
+ \ 'ctrl-t': 'tab split',
  \ 'ctrl-s': 'SplitOpen',
  \ 'ctrl-x': 'split',
  \ 'ctrl-v': 'vsplit' }
