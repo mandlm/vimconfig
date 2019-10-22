@@ -59,8 +59,8 @@ let g:prosession_tmux_title = 1
 let g:prosession_per_branch = 1
 
 " fzf.vim
-nmap <C-P> :Files<CR>
-nmap <C-F> :Rg \b<C-R><C-W>\b<CR>
+nnoremap <C-P> :Files<CR>
+nnoremap <C-F> :Rg \b<C-R><C-W>\b<CR>
 
 let g:splitopen_set_fzf_keys = 1
 
