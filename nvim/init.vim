@@ -62,6 +62,8 @@ nmap <C-P> :Files<CR>
 nmap <C-F> :Rg \b<C-R><C-W>\b<CR>
 nmap <ESC><C-P> :Tags<CR>
 
+let g:splitopen_set_fzf_keys = 1
+
 " deoplete
 let g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * silent! pclose!
