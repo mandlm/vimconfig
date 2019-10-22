@@ -50,9 +50,6 @@ let g:lightline = { 'colorscheme': 'solarized' }
 let g:clang_format#auto_format = 1
 let g:clang_format#enable_fallback_style = 0
 
-" vim-fswitch
-nmap <ESC>o :FSHere<CR>
-
 " prosession
 let g:prosession_tmux_title = 1
 let g:prosession_per_branch = 1
@@ -60,7 +57,6 @@ let g:prosession_per_branch = 1
 " fzf.vim
 nmap <C-P> :Files<CR>
 nmap <C-F> :Rg \b<C-R><C-W>\b<CR>
-nmap <ESC><C-P> :Tags<CR>
 
 let g:splitopen_set_fzf_keys = 1
 
