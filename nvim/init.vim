@@ -39,6 +39,10 @@ set background=dark
 " line numbers
 set number
 
+" terminal mode options
+autocmd TermOpen * startinsert
+tnoremap <ESC> <C-\><C-n>
+
 " ctags config
 set tags=./tags;
 nnoremap <F2> <C-]>
