@@ -39,6 +39,9 @@ set background=dark
 " line numbers
 set number
 
+" preview commands
+set inccommand=split
+
 " terminal mode options
 autocmd TermOpen * startinsert
 tnoremap <ESC> <C-\><C-n>
