@@ -46,7 +46,6 @@ set inccommand=split
 
 " terminal mode options
 autocmd TermOpen * startinsert
-tnoremap <ESC> <C-\><C-n>
 
 " ctags config
 set tags=./tags;
