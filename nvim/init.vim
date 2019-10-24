@@ -3,7 +3,9 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'rhysd/vim-clang-format'
+
 Plug 'derekwyatt/vim-fswitch'
 
 Plug 'tpope/vim-obsession'
