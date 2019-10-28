@@ -48,7 +48,10 @@ set number
 set inccommand=split
 
 " terminal mode options
-autocmd TermOpen * startinsert
+augroup terminal_mode
+	autocmd!
+	autocmd TermOpen * startinsert
+augroup END
 
 " ctags config
 set tags=./tags;
@@ -73,7 +76,10 @@ let g:splitopen_set_fzf_keys = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-autocmd CompleteDone * silent! pclose!
+augroup deoplete
+	autocmd!
+	autocmd CompleteDone * silent! pclose!
+augroup END
 call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -96,3 +102,7 @@ endfunction
 let timerChecktime = timer_start(4000, 'CheckTime', {'repeat': -1})
 " }}}
 
+augroup cpp_settings
+	autocmd!
+	autocmd Filetype cpp set colorcolumn=101
+augroup END
