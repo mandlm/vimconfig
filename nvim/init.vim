@@ -34,6 +34,9 @@ call plug#end()
 set tabstop=4
 set shiftwidth=4
 
+" scroll offset
+set scrolloff=4
+
 " solarized dark theme
 colorscheme solarized
 set background=dark
