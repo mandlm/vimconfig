@@ -28,6 +28,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
+Plug 'craigemery/vim-autotag'
+
 call plug#end()
 
 " tabwidth
@@ -56,6 +58,9 @@ augroup END
 " ctags config
 set tags=./tags;
 nnoremap <F2> <C-]>
+
+" autotag
+let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
 
 " lightline config
 let g:lightline = { 'colorscheme': 'solarized' }
