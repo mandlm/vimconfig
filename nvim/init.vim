@@ -30,6 +30,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 Plug 'craigemery/vim-autotag'
 
+Plug 'tpope/vim-dispatch'
+
 call plug#end()
 
 " tabwidth
