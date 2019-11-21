@@ -30,6 +30,10 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 Plug 'tpope/vim-dispatch'
 
+Plug 'RRethy/vim-illuminate'
+
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 " tabwidth
