@@ -6,6 +6,8 @@
 [core]
 	editor = vim
 	pager = less -x1,5
+	editor = nvim
+	pager = less -S -x1,5
 	whitespace = cr-at-eol
 [rebase]
 	autostash = true
@@ -38,3 +40,5 @@
 
 [rerere]
 	enabled = true
+[fetch]
+	writeCommitGraph = true
