@@ -28,8 +28,6 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 
-Plug 'craigemery/vim-autotag'
-
 Plug 'tpope/vim-dispatch'
 
 call plug#end()
