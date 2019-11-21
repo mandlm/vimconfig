@@ -100,7 +100,7 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <F12> :call LanguageClient#textDocument_definition()<CR>
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
-	\ 'cpp': ['/usr/lib/llvm-7/bin/clangd'],
+	\ 'cpp': ['clangd'],
     \ }
 
 " autoread/checktime timer {{{
