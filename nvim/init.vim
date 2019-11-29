@@ -34,6 +34,8 @@ Plug 'RRethy/vim-illuminate'
 
 Plug 'tpope/vim-surround'
 
+Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
+
 call plug#end()
 
 " tabwidth
@@ -69,6 +71,9 @@ augroup END
 " ctags config
 set tags=./tags;
 nnoremap <F2> <C-]>
+
+" swp-vim
+let g:swpvim_autoformat = 0
 
 " autotag
 let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
