@@ -93,6 +93,9 @@ let g:prosession_per_branch = 1
 nnoremap <C-P> :Files<CR>
 nnoremap <C-F> :Rg \b<C-R><C-W>\b<CR>
 
+" vim-illuminate
+highlight illuminatedWord ctermbg=23
+
 " split-open
 let g:splitopen_set_fzf_keys = 1
 nnoremap <C-S> :Split<CR>
