@@ -53,6 +53,13 @@ set number
 " preview commands
 set inccommand=split
 
+" set cursorline in active window
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
 " terminal mode options
 augroup terminal_mode
 	autocmd!
