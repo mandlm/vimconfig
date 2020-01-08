@@ -6,7 +6,8 @@ export ZSH="/home/mandlm/.oh-my-zsh"
 
 # tmux plugin settings
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOCONNECT=true
+ZSH_TMUX_UNICODE=true
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
