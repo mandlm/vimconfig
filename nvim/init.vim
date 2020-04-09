@@ -33,6 +33,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'RRethy/vim-illuminate'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
