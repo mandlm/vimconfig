@@ -52,6 +52,10 @@ set background=dark
 " line numbers
 set number
 
+" searching
+set ignorecase
+set smartcase
+
 " preview commands
 set inccommand=split
 
