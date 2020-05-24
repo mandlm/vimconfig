@@ -35,6 +35,8 @@ Plug 'RRethy/vim-illuminate'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
+Plug 'Lenovsky/nuake'
+
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
 call plug#end()
@@ -132,6 +134,11 @@ function! CheckTime(timer)
 endfunction
 let timerChecktime = timer_start(4000, 'CheckTime', {'repeat': -1})
 " }}}
+
+" nuake console
+nnoremap <F4> :Nuake<CR>
+inoremap <F4> <C-\><C-n>:Nuake<CR>
+tnoremap <F4> <C-\><C-n>:Nuake<CR>
 
 augroup cpp_settings
 	autocmd!
