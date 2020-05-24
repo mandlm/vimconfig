@@ -114,6 +114,7 @@ augroup deoplete
 	autocmd CompleteDone * silent! pclose!
 augroup END
 call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+set completefunc=LanguageClient#complete
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -121,7 +122,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " LanguageClient-neovim
 set hidden
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <F12> :call LanguageClient#textDocument_definition()<CR>
+nnoremap K :call LanguageClient#textDocument_hover()<CR>
+nnoremap gd :call LanguageClient#textDocument_definition()<CR>
+
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
 	\ 'cpp': ['clangd'],
