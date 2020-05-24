@@ -97,7 +97,7 @@ let g:prosession_tmux_title = 1
 let g:prosession_per_branch = 1
 
 " fzf.vim
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
 nnoremap <C-F> :Rg \b<C-R><C-W>\b<CR>
 
 " vim-illuminate
