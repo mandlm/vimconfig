@@ -20,8 +20,13 @@
 	whitespace = red reverse            
 [mergetool]
 	keepBackup = false
+	prompt = false
 [diff]
 	tool = vimdiff
+[difftool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+	prompt = false
 [gitflow]
 	multi-hotfix = true
 [gitflow "branch"]
@@ -39,6 +44,8 @@
 [format]
 	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7,trunc)%aN%Cred%d %Creset%s
 
+[mergetool "nvim"]
+	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [rerere]
 	enabled = true
 [fetch]
