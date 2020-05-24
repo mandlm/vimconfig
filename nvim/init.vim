@@ -37,6 +37,8 @@ Plug 'tpope/vim-commentary'
 
 Plug 'Lenovsky/nuake'
 
+Plug 'junegunn/vim-peekaboo'
+
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
 call plug#end()
