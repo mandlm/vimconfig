@@ -9,6 +9,7 @@
 	editor = nvim
 	pager = less -S -x1,5
 	whitespace = cr-at-eol
+	excludesfile = ~/.gitignore
 [rebase]
 	autostash = true
 [color "diff"]
