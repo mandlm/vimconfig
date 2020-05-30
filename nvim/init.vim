@@ -84,6 +84,9 @@ nnoremap <F2> <C-]>
 " swp-vim
 let g:swpvim_autoformat = 0
 
+" git-gutter 
+highlight SignColumn ctermbg=0
+
 " autotag
 let g:autotagmaxTagsFileSize = 1024 * 1024 * 128
 
