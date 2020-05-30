@@ -51,7 +51,7 @@ set shiftwidth=4
 set scrolloff=4
 
 " solarized dark theme
-colorscheme solarized
+silent! colorscheme solarized
 set background=dark
 
 " line numbers
