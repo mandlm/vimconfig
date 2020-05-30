@@ -115,7 +115,7 @@ augroup deoplete
 	autocmd!
 	autocmd CompleteDone * silent! pclose!
 augroup END
-call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+silent! call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 set completefunc=LanguageClient#complete
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
