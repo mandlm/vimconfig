@@ -50,3 +50,5 @@
 	enabled = true
 [fetch]
 	writeCommitGraph = true
+[pull]
+	rebase = true
