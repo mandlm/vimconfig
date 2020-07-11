@@ -114,3 +114,4 @@ export EDITOR='nvim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.dotfiles/fzf/git-completion.zsh ] && source ~/.dotfiles/fzf/git-completion.zsh
 
+export GPG_TTY=$(tty)
