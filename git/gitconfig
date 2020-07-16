@@ -1,6 +1,13 @@
 [user]
-	email = changeme
+	useConfigOnly = true
+[user "changeme"]
 	name = changeme
+	email = changeme
+	signingkey = changeme
+[alias]
+	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
+[commit]
+	gpgsign = true
 [push]
 	default = simple
 [core]
@@ -51,5 +58,3 @@
 	writeCommitGraph = true
 [pull]
 	rebase = true
-[commit]
-	gpgsign = true
