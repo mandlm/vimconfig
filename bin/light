@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sed --in-place --follow-symlinks --expression "s/^colors: \*dark/colors: *light/" ~/.config/alacritty/alacritty.yml
+sed --in-place --follow-symlinks --expression "s/^set background=dark/set background=light/" ~/.config/nvim/init.vim
+sed --in-place --follow-symlinks --expression "s/dark/light/" ~/.tmux.conf && tmux source-file ~/.tmux.conf
