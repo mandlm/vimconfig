@@ -39,6 +39,8 @@ Plug 'Lenovsky/nuake'
 
 Plug 'junegunn/vim-peekaboo'
 
+Plug 'alfredodeza/pytest.vim'
+
 Plug 'psf/black', { 'branch': 'stable' }
 
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
