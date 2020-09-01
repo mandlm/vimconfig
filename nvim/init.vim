@@ -39,6 +39,8 @@ Plug 'Lenovsky/nuake'
 
 Plug 'junegunn/vim-peekaboo'
 
+Plug 'psf/black', { 'branch': 'stable' }
+
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
 call plug#end()
@@ -148,7 +150,11 @@ nnoremap <F4> :Nuake<CR>
 inoremap <F4> <C-\><C-n>:Nuake<CR>
 tnoremap <F4> <C-\><C-n>:Nuake<CR>
 
-augroup cpp_settings
+augroup color_column
 	autocmd!
-	autocmd Filetype cpp set colorcolumn=101
-augroup END
+	autocmd Filetype cpp,python set colorcolumn=101
+augroup end
+
+augroup format_black
+	autocmd BufWritePre *.py execute ':Black'
+augroup end
