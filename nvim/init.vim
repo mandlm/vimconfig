@@ -54,6 +54,9 @@ set shiftwidth=4
 " scroll offset
 set scrolloff=4
 
+" presistent undo
+set undofile
+
 " solarized dark theme
 silent! colorscheme solarized
 set background=dark
