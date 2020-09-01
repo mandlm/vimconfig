@@ -111,16 +111,25 @@ nnoremap <C-F> :Rg \b<C-R><C-W>\b<CR>
 highlight illuminatedWord ctermbg=23
 
 " split-open
-let g:splitopen_set_fzf_keys = 1
 nnoremap <C-S> :Split<CR>
+let g:fzf_action = {
+	\	'ctrl-s': 'SplitOpen',
+	\	'ctrl-t': 'tab drop',
+	\	'ctrl-x': 'split',
+	\	'ctrl-y': 'vsplit',
+	\	}
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-augroup deoplete
-	autocmd!
-	autocmd CompleteDone * silent! pclose!
-augroup END
 silent! call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
+silent! clas deoplete#custom#option({
+	\ 'smart_case': v:true,
+	\ })
+
+augroup close_preview
+	autocmd InsertLeave * silent! pclose!
+augroup end
+
 set completefunc=LanguageClient#complete
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
