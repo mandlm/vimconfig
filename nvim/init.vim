@@ -3,7 +3,6 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 
-Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'rhysd/vim-clang-format'
 
 Plug 'derekwyatt/vim-fswitch'
@@ -40,8 +39,6 @@ Plug 'Lenovsky/nuake'
 Plug 'junegunn/vim-peekaboo'
 
 Plug 'alfredodeza/pytest.vim'
-
-Plug 'psf/black', { 'branch': 'stable' }
 
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
@@ -169,6 +166,6 @@ augroup color_column
 	autocmd Filetype cpp,python set colorcolumn=101
 augroup end
 
-augroup format_black
-	autocmd BufWritePre *.py execute ':Black'
+augroup auto_format
+	autocmd BufWritePre *.py :call LanguageClient#textDocument_formatting_sync()
 augroup end
