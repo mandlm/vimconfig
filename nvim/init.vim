@@ -172,5 +172,5 @@ augroup color_column
 augroup end
 
 augroup auto_format
-	autocmd BufWritePre *.py :call LanguageClient#textDocument_formatting_sync()
+	autocmd BufWritePre *.py,*.rs :call LanguageClient#textDocument_formatting_sync()
 augroup end
