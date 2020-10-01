@@ -148,6 +148,7 @@ nmap gd <Plug>(lcn-definition)
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
 	\ 'cpp': ['clangd'],
+	\ 'rust': ['rustup', 'run', 'stable', 'rls'],
     \ }
 
 let g:LanguageClient_selectionUI = 'fzf'
