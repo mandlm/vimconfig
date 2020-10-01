@@ -79,6 +79,8 @@ plugins=(
 	tmux
 )
 
+[ -d ~/.zfunc ] && fpath+=~/.zfunc
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
