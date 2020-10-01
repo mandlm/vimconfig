@@ -150,6 +150,8 @@ let g:LanguageClient_serverCommands = {
 	\ 'cpp': ['clangd'],
     \ }
 
+let g:LanguageClient_selectionUI = 'fzf'
+
 " autoread/checktime timer {{{
 set autoread
 function! CheckTime(timer)
