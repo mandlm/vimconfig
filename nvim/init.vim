@@ -40,6 +40,8 @@ Plug 'junegunn/vim-peekaboo'
 
 Plug 'alfredodeza/pytest.vim'
 
+Plug 'cespare/vim-toml'
+
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
 call plug#end()
