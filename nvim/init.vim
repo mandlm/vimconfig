@@ -130,6 +130,7 @@ let g:deoplete#enable_at_startup = 1
 silent! call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
 silent! call deoplete#custom#option({
 	\ 'smart_case': v:true,
+	\ 'ignore_sources': {'_': ['around', 'buffer']},
 	\ })
 
 augroup close_preview
