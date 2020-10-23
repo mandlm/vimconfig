@@ -42,6 +42,8 @@ Plug 'alfredodeza/pytest.vim'
 
 Plug 'cespare/vim-toml'
 
+Plug 'vimwiki/vimwiki'
+
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
 call plug#end()
@@ -171,6 +173,14 @@ augroup color_column
 	autocmd Filetype cpp,python set colorcolumn=101
 augroup end
 
+" format on save
 augroup auto_format
 	autocmd BufWritePre *.py,*.rs :call LanguageClient#textDocument_formatting_sync()
 augroup end
+
+" vimwiki
+let g:vimwiki_list = [
+	\ {'name': 'personal', 'path': '~/vimwiki/personal'},
+	\ {'name': 'swp', 'path': '~/vimwiki/swp'}
+	\ ]
+
