@@ -20,13 +20,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'mandlm/vim-split-open'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-
 Plug 'tpope/vim-dispatch'
 
 Plug 'RRethy/vim-illuminate'
@@ -43,6 +36,8 @@ Plug 'alfredodeza/pytest.vim'
 Plug 'cespare/vim-toml'
 
 Plug 'vimwiki/vimwiki'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
@@ -125,36 +120,12 @@ let g:fzf_action = {
 	\	'ctrl-y': 'vsplit',
 	\	}
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-silent! call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy'])
-silent! call deoplete#custom#option({
-	\ 'smart_case': v:true,
-	\ 'ignore_sources': {'_': ['around', 'buffer']},
-	\ })
-
 augroup close_preview
 	autocmd InsertLeave * silent! pclose!
 augroup end
 
-set completefunc=LanguageClient#complete
-
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" LanguageClient-neovim
-set hidden
-nmap <F5> <Plug>(lcn-menu)
-nmap K <Plug>(lcn-hover)
-nmap gd <Plug>(lcn-definition)
-
-let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls'],
-	\ 'cpp': ['clangd'],
-	\ 'rust': ['rustup', 'run', 'stable', 'rls'],
-    \ }
-
-let g:LanguageClient_selectionUI = 'fzf'
 
 " autoread/checktime timer {{{
 set autoread
@@ -174,14 +145,29 @@ augroup color_column
 	autocmd Filetype cpp,python set colorcolumn=101
 augroup end
 
-" format on save
-augroup auto_format
-	autocmd BufWritePre *.py,*.rs :call LanguageClient#textDocument_formatting_sync()
-augroup end
-
 " vimwiki
 let g:vimwiki_list = [
 	\ {'name': 'personal', 'path': '~/vimwiki/personal'},
 	\ {'name': 'swp', 'path': '~/vimwiki/swp'}
 	\ ]
 
+" coc 
+set updatetime=300
+
+let g:coc_global_extensions = [
+	\ 'coc-clangd',
+	\ 'coc-cmake',
+	\ 'coc-json',
+	\ 'coc-python',
+	\ 'coc-rust-analyzer',
+	\ 'coc-sh',
+	\ 'coc-vimlsp',
+	\ 'coc-yaml',
+	\ ]
+
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
