@@ -2,10 +2,11 @@
 
 for wiki in ~/vimwiki/*
 do
+	[[ $wiki =~ _html$ ]] && continue
 	echo Synching $wiki
 	git -C $wiki pull --rebase --autostash
 	git -C $wiki add .
 	git -C $wiki commit -a -n -m "Auto-update"
 	git -C $wiki push
-	echo done.
+	echo done synching $wiki.
 done
