@@ -106,6 +106,7 @@ let g:prosession_per_branch = 1
 
 " fzf.vim
 nnoremap <C-P> :GFiles<CR>
+nnoremap <C-G> :Rg<CR>
 nnoremap <C-F> :Rg \b<C-R><C-W>\b<CR>
 
 " vim-illuminate
