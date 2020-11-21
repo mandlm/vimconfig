@@ -152,6 +152,8 @@ let g:vimwiki_list = [
 	\ {'name': 'swp', 'path': '~/vimwiki/swp'}
 	\ ]
 
+let g:vimwiki_table_mappings = 0
+
 " coc 
 set updatetime=300
 
