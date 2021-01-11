@@ -173,6 +173,7 @@ nnoremap <silent> K :call CocAction('doHover')<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>rn <Plug>(coc-rename)
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
