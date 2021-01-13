@@ -118,3 +118,5 @@ export EDITOR='nvim'
 [ -f ~/.dotfiles/fzf/git-completion.zsh ] && source ~/.dotfiles/fzf/git-completion.zsh
 
 export GPG_TTY=$(tty)
+export BROWSER=wsl-open.sh
+[ -f ~/.dircolors-solarized/dircolors.256dark ] && eval `dircolors ~/.dircolors-solarized/dircolors.256dark`

@@ -4,6 +4,14 @@
 	name = changeme
 	email = changeme
 	signingkey = changeme
+[user "private"]
+	name = Michael Mandl
+	email = mandlm@molez.net
+	signingkey = 4AA25D647AA54CC7
+[user "swp"]
+	name = Michael Mandl
+	email = mandl@vi-bim.de
+	signingkey = 4E60F44227F611B4
 [alias]
 	identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
 [commit]
@@ -17,6 +25,7 @@
 	pager = less -S -x1,5
 	whitespace = cr-at-eol
 	excludesfile = ~/.gitignore
+	hookspath = /mnt/d/SWP/devtools/userhooks
 [rebase]
 	autostash = true
 [color "diff"]
@@ -31,6 +40,8 @@
 [diff]
 	tool = vimdiff
 [difftool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[mergetool "vimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [difftool]
 	prompt = false
@@ -50,8 +61,12 @@
 	date = relative
 [format]
 	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %C(red)%G? %Cgreen%<(7,trunc)%aN%Cred%d %Creset%s
+[merge]
+	tool = bc
 [mergetool "nvim"]
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[mergetool "bc"]
+	path = /mnt/c/Program Files/Beyond Compare 4/BComp.exe
 [rerere]
 	enabled = true
 [fetch]
