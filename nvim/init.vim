@@ -159,6 +159,7 @@ set updatetime=300
 let g:coc_global_extensions = [
 	\ 'coc-clangd',
 	\ 'coc-cmake',
+	\ 'coc-eslint',
 	\ 'coc-html',
 	\ 'coc-json',
 	\ 'coc-python',
@@ -174,6 +175,7 @@ nnoremap <silent> K :call CocAction('doHover')<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> ga <Plug>(coc-codeaction)
 nmap <silent> <leader>rn <Plug>(coc-rename)
 
 " use <tab> for trigger completion and navigate to the next complete item
