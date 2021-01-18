@@ -1,16 +1,18 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "cpp",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "markdown",
-    "python",
-    "rust",
-    "toml",
-    "yaml"
-  ],
-  "clangd.path": "/home/mandlm/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
-  "eslint.format.enable": true
+    "coc.preferences.formatOnSaveFiletypes": [
+        "cpp",
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "markdown",
+        "python",
+        "rust",
+        "toml",
+        "yaml"
+    ],
+    "clangd.path": "/home/mandlm/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+    "eslint.autoFixOnSave": true,
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn"
 }
