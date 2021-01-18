@@ -145,7 +145,7 @@ tnoremap <F4> <C-\><C-n>:Nuake<CR>
 
 augroup color_column
 	autocmd!
-	autocmd Filetype cpp,python set colorcolumn=101
+	autocmd Filetype cpp,python,javascript,javascriptreact,typescript,typescriptreact set colorcolumn=101
 augroup end
 
 " vimwiki
