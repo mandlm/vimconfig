@@ -49,6 +49,9 @@ call plug#end()
 set tabstop=4
 set shiftwidth=4
 
+" indent with spaces
+set expandtab
+
 " scroll offset
 set scrolloff=4
 
