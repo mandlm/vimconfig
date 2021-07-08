@@ -198,3 +198,5 @@ inoremap <silent><expr> <S-Tab>
       \ <SID>check_back_space() ? "\<S-Tab>" :
       \ coc#refresh()
 
+" select completion items with enter
+inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
