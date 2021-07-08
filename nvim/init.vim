@@ -159,6 +159,7 @@ let g:vimwiki_global_ext = 0
 
 " coc 
 set updatetime=300
+highlight CocHintSign ctermfg=10
 
 let g:coc_global_extensions = [
 	\ 'coc-clangd',
