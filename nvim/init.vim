@@ -43,6 +43,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 Plug 'git@gitlab.softwareparadies.de:IDE/swp-vim.git'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 call plug#end()
 
 " tabwidth
