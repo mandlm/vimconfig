@@ -25,7 +25,6 @@
 	pager = less -S -x1,5
 	whitespace = cr-at-eol
 	excludesfile = ~/.gitignore
-	hookspath = /mnt/d/SWP/devtools/userhooks
 [rebase]
 	autostash = true
 [color "diff"]
