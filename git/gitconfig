@@ -61,7 +61,7 @@
 [format]
 	pretty = format:%C(yellow)%h %Cblue%>(12)%ad %C(red)%G? %Cgreen%<(7,trunc)%aN%Cred%d %Creset%s
 [merge]
-	tool = bc
+	tool = nvim
 [mergetool "nvim"]
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [mergetool "bc"]
